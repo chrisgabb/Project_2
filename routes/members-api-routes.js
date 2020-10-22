@@ -4,7 +4,10 @@ module.exports = function(app) {
   app.get("/api/members", function(req, res) {
 
     db.Members.findAll({
-      include: [db.sessions]
+      include: [{
+        model: db.Sessions,
+          as: "sessions"
+    }]
     }).then(function(dbMembers) {
       res.json(dbMembers);
     });

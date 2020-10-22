@@ -11,16 +11,11 @@ module.exports = function(app) {
   
   // GET route for getting all of the posts
   app.get("/api/sessions", function(req, res) {
-    var query = {};
-    if (req.query.members_id) {
-      query.MembersId = req.query.members_id;
-    }
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
     db.Sessions.findAll({
-      where: query,
-      include: [db.Members]
+      include: [{
+        model: db.Members,
+          as: "members"
+    }]
     }).then(function(dbSessions) {
       res.json(dbSessions);
     });

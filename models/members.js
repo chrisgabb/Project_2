@@ -13,11 +13,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Members.associate = function (models) {
-    Members.hasOne(models.Login, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+   
     Members.belongsToMany(models.Sessions, {
       through: "session_member",
       as: "sessions",

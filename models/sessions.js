@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-    description: {
+    info: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]

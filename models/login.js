@@ -21,5 +21,5 @@ Login.associate = function (models) {
   });
 };
 
-return Request;
+return Login;
 };

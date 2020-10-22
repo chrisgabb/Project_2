@@ -5,13 +5,18 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
+    typeOfSession: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
+    },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
     },
     membersLimit: {
-      type: DataTypes.INTRGER,
+      type: DataTypes.INTEGER,
       allowNull: true,
       len: [1]
     },
@@ -91,7 +96,7 @@ module.exports = function (sequelize, DataTypes) {
   };
 
 
-return Request;
+return Sessions;
 };
 
 

@@ -17,6 +17,8 @@
   </head>
 
 <body>
+
+  <!-- nav bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Avail</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,26 +43,28 @@
       </ul>
     </div>
   </nav>
-  <div class="container" id="home_box">
-    <div class="row">
-      <div class="col-3" id="left">
-        <div class="card">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-6"id="main">
-        One of three columns
-      </div>
-      <div class="col-3" id="right">
-        One of three columns
-      </div>
+  <!-- nav bar -->
+
+  <!-- content -->
+ <container class="indexcont">
+   <div class="row" id="buttonrow">
+     <div class="col">
+      <button type="button" class="btn btn-primary btn-lg">Focus Study</button> <button type="button" class="btn btn-warning btn-lg">General Study</button> <button type="button" class="btn btn-danger btn-lg">Request Help</button>
+     </div>
+   </div>
+  <div class="row">
+    <div class="col-sm-2" id="left">
+     <h5>See who is online:</h5>
+    </div>
+    <div class="col-sm-10" id="main">
+      &nbsp
     </div>
   </div>
-  
+</container>
+
+<footer class="footer"><h6>Avail</h6></footer>
+<!-- content -->
+
   <!-- Modal HTML -->
   <div id="myModal" class="modal fade">
     <div class="modal-dialog modal-login">
@@ -90,10 +94,12 @@
       </div>
     </div>
   </div>     
+  <!-- modal html -->
 
+  <!-- scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-
+  <!-- scripts -->
 </body>
 
 </html>

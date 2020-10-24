@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     var Login = sequelize.define("Login", {
       // Giving the Members model a name of type STRING
 
- userName:{
+ email:{
     type: DataTypes.STRING,
    },
    password:{

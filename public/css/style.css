@@ -11,7 +11,9 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
-
+lable {
+	font-weight: bold;
+}
 .icon {
 	height: 75px;
 	width: 75px;

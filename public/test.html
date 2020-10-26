@@ -1,0 +1,107 @@
+<style type="text/css">
+    @font-face {
+     font-family: 'kinder';
+     src: url('kindergarten.ttf');
+    }
+
+    /* Eléments principaux de la page */
+    body
+    {
+        background: url('back.jpg');
+        font-family: 'kinder', Arial, sans-serif;
+        color: #181818;
+    }
+
+    #bloc_page
+    {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* Header */
+    header
+    {
+        display: flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    #titre
+    {
+        display:flex;
+        flex-direction:row;
+        align-items:flex-end;
+    }
+
+    #titre div
+    {
+        position:absolute;
+        right: 40px;
+        top: 25px;
+    }
+
+    /* Body */
+    aside
+    {
+        width: 5%;
+        max-height:100%;
+        background: url(ban.jpg);
+        border-radius: 4px;
+        word-wrap:break-word;
+        border:1px solid red;
+    }
+
+    section
+    {
+        display:flex;
+    }
+
+    </style>
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre">
+                    <h1>Jules Raymond</h1>
+
+                    <div> 
+                        <a href="moi.jpeg"> <img src="moi_mini.jpg" alt="Une photo de Jules Raymond" title="Cliquez pour agrandir" /></a> 
+                    </div>
+                </div>
+
+                <h3>Etudiant à l'université de Californie-Berkeley</h3>
+            </header>
+
+
+            <section>
+                <aside>this is testing</aside>
+
+                <article id="experience">
+                    <h3>Mon expérience</h3>
+                        <ul>
+                            <li>De 1992 à 2004: naissance et école primaire</li>
+                            <li>De 2004 à 2010: école secondaire (high scool)</li>
+                            <li>De 2010 jusqu'à présent: étudiant universitaire</li>
+                        </ul>
+                <article>
+
+                <article id="competences">
+                    <h3>Mes compétances</h3>
+                        <ol>
+                            <li>HTML & CSS (en procès)</li>
+                            <li>PHP & MySql (avancé)</li>
+                            <li>C (expert)</li>
+                        </ol>
+                </article>
+
+                <article id="formation">
+                    <h3>Ma formation</h3>
+                        <ul>
+                            <li>J'ai appris sur <a href="http://openclassrooms.com/" title="Cliquez pour découvrir!">OpenClassroom</a>.</li>
+                            <li>J'ai posé mes questions sur <a href="http://stackoverflow.com/" title="Cliquez pour découvrir encore!">StackOverFlow</a>.</li>
+                        </ul>
+                </article>
+            </section>
+
+        </div>
+    </body>

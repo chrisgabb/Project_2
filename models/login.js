@@ -1,5 +1,4 @@
 module.exports = function(sequelize, DataTypes) {
-<<<<<<< HEAD
     var Login = sequelize.define("Login", {
       // Giving the Members model a name of type STRING
 
@@ -24,7 +23,6 @@ Login.associate = function (models) {
 
 return Login;
 };
-=======
   var Login = sequelize.define("Login", {
     // Giving the Members model a name of type STRING
 
@@ -49,4 +47,3 @@ Login.belongsTo(models.Members, {
 
 return Login;
 };
->>>>>>> 08581c35231c9a838e7169da7832507711191f9f

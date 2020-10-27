@@ -18,8 +18,7 @@ header nav img {
 article{
     /* background-color: rgba(247, 174, 38, 0.486); */
     margin-top: 55rem ;
-    margin-bottom: 30rem ;
-    
+    margin-bottom: 30rem ; 
 }
 
 article div p{
@@ -45,11 +44,28 @@ article div p{
 header ul {
     margin-right: 2rem;
 }
-
+.red {
+    background-color: rgba(189, 6, 6, 0.774);
+}
+.green {
+    background-color: rgba(36, 110, 36, 0.685);
+}
+.orange {
+    background-color: rgba(175, 117, 10, 0.747);
+}
  main {
    position: fixed;
 }
-
+section{
+    margin-top: 3rem;
+    float: right;
+    width: 83%;
+    height: 100%;
+    position: relative;
+}
+.all-cards{
+    width: 300px
+}
 
 header nav ul li {
     display: inline-block;

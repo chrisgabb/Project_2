@@ -71,7 +71,15 @@ section{
     max-width: 50%;
     /* position: relative; */
 }
-
+.tagAlong{
+    float: right;
+    margin-right: -5rem;
+    background-color: transparent;
+}
+.sessionHour{
+    float: left;
+    margin-left: -7rem;
+}
 header nav ul li {
     display: inline-block;
     margin-left: 25px;

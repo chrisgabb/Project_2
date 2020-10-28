@@ -14,50 +14,70 @@ $(document).ready(function () {
   function settingSessionsAcordion(id, title, info, typeOfSession, membersLimit, timeS, timeE, Opt1TS, Opt1TE, Opt2TS, Opt2TE, Opt3TS, Opt3TE, members) {
         var thisSessionMembers = []
         var typeOfSessionColor;
-        var sessionDate = moment(timeS).format("DD ddd")
+        var sessionDate = moment(timeS).format("ddd, MMM DD")
         for (let j = 0; j < members.length; j++) {
             thisSessionMembers.push(`<li> ${members[j].first_name} ${members[j].last_name}</li>`)
         }
         collapseCard = ` <div id="collapse${id}" class="collapse" aria-labelledby="heading${id}" data-parent="#accordion">
                             <div class="card-body">
-                            <table>
+                            <table border-spacing: 30px">
                                         <tr>
                                             <td>
                                                 <h4>Title: ${title} </h4>
-                                                <h6>Session begins:</h6> ${moment(timeS).format("ddd L LT" )}<br>
-                                                <h6>Sesion ends:</h6> ${moment(timeE).format("ddd L LT")}
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <h6>Description:</h6> ${info}
+                                                <h6>Session begins:</h6> ${moment(timeS).format("ddd L LT" )}<br>
+                                                <h6>Sesion ends:</h6> ${moment(timeE).format("ddd L LT")}
                                             </td>
-                                        </tr>
-                                        <td>
+                                            <td>  </td>
+                                            <td rowspan="2"class="text-right ml-3" style="vertical-align:top">
                                             <h6>Participants:</h6>
                                             <i>Limit:(${membersLimit})</i>
                                             <ul>
                                                 ${thisSessionMembers}
                                             </ul>
                                         </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6>Description:</h6> ${info}
+                                            </td>
+                                        </tr>
+                                       
                                     </table>
                             </div>
                             </div>`;
         switch(typeOfSession){
           case "request": {
                             typeOfSessionColor = "red";
-                            typeOfSessionDisplay = `${title}  ${members[0].first_name} ${members[0].last_name}`
-                            collapseCard = "";
+                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3><button>Take On It</button></h3></li><li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name} ${members[0].last_name}</p></li></ul>`
+                            collapseCard = `<div id="collapse${id}" class="collapse" aria-labelledby="heading${id}" data-parent="#accordion">
+                            <div class="card-body">
+                            <table>
+                            <tr>
+                                          <td>
+                                                <h6>Description:</h6> ${info}
+                                            </td>
+                                        </tr>
+                                        </table>
+                                        </div>
+                                        </div>`;
                             break;  
                           }
           case "general": {
                             typeOfSessionColor = "green";
-                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li><li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name} ${members[0].last_name}</p></li></ul>`
+                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li>
+                            <li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name}
+                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5><button class="tagAlong">TagAlong</button>`
                             break
                           }
           case "focus": {
                           typeOfSessionColor = "orange";
-                          typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li><li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name} ${members[0].last_name}</p></li></ul>`
+                          typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li>
+                          <li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name}
+                           ${members[0].last_name}</p></li></ul> <button class="tagAlong">TagAlong</button>`
                             break
                         }
          }

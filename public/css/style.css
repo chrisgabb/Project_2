@@ -45,13 +45,13 @@ header ul {
     margin-right: 2rem;
 }
 .red {
-    background-color: rgba(189, 6, 6, 0.774);
+    background-color: rgba(189, 6, 6, 0.61);
 }
 .green {
-    background-color: rgba(36, 110, 36, 0.685);
+    background-color: rgba(241, 245, 26, 0.205);
 }
-.orange {
-    background-color: rgba(175, 117, 10, 0.747);
+.blue {
+    background-color: rgba(70, 141, 221, 0.274);
 }
  main {
    position: fixed;
@@ -73,12 +73,15 @@ section{
 }
 .tagAlong{
     float: right;
-    margin-right: -5rem;
+    /* margin-right: -3rem; */
     background-color: transparent;
+}
+.takeOnIt{
+    background-color:transparent;
 }
 .sessionHour{
     float: left;
-    margin-left: -7rem;
+    /* margin-left: -5rem; */
 }
 header nav ul li {
     display: inline-block;

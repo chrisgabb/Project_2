@@ -52,7 +52,7 @@ $(document).ready(function () {
         switch(typeOfSession){
           case "request": {
                             typeOfSessionColor = "red";
-                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3><button>Take On It</button></h3></li><li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name} ${members[0].last_name}</p></li></ul>`
+                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3> <button class="takeOnIt">Take On It</button></h3></li><li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name} ${members[0].last_name}</p></li></ul>`
                             collapseCard = `<div id="collapse${id}" class="collapse" aria-labelledby="heading${id}" data-parent="#accordion">
                             <div class="card-body">
                             <table>
@@ -68,16 +68,16 @@ $(document).ready(function () {
                           }
           case "general": {
                             typeOfSessionColor = "green";
-                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li>
-                            <li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name}
+                            typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h4>${sessionDate}</h4></li>
+                            <li> <h3 float-none>${title}</h3></li> <li class="float-right"> <p> by: ${members[0].first_name}
                              ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5><button class="tagAlong">TagAlong</button>`
                             break
                           }
           case "focus": {
-                          typeOfSessionColor = "orange";
-                          typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h3>${sessionDate}</h3></li>
-                          <li> <h4 float-none>${title}</h4></li> <li class="float-right"> <p> by: ${members[0].first_name}
-                           ${members[0].last_name}</p></li></ul> <button class="tagAlong">TagAlong</button>`
+                          typeOfSessionColor = "blue";
+                          typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h4>${sessionDate}</h4></li>
+                            <li> <h3 float-none>${title}</h3></li> <li class="float-right"> <p> by: ${members[0].first_name}
+                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5><button class="tagAlong">TagAlong</button>`
                             break
                         }
          }

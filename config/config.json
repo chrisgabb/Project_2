@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "Covid19_2020",
-=======
-    "password": "DBZD2018!",
->>>>>>> 08581c35231c9a838e7169da7832507711191f9f
     "database": "channel",
     "host": "127.0.0.1",
     "port": 3306,
@@ -13,11 +9,7 @@
   },
   "test": {
     "username": "root",
-<<<<<<< HEAD
     "password": "Covid19_2020",
-=======
-    "password": "DBZD2018!",
->>>>>>> 08581c35231c9a838e7169da7832507711191f9f
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
@@ -25,11 +17,7 @@
   },
   "production": {
     "username": "root",
-<<<<<<< HEAD
     "password": "Covid19_2020",
-=======
-    "password": "DBZD2018!",
->>>>>>> 08581c35231c9a838e7169da7832507711191f9f
     "database": "database_production",
     "host": "127.0.0.1",
     "port": 3306,

@@ -22,21 +22,125 @@
             <img class="navAvail" src="images/logo3.png" alt="navAvail">
             <ul>
                 <li>Sign out </li>
-                
+
             </ul>
         </nav>
     </header>
-    <aside >
-        <button type="button" class="btn btn-danger"> Create Session</button> 
+    <aside>
+        <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#fullHeightModalRight"> Request
+            Help</button>
         <h3>Peers</h3>
         <ul>
 
         </ul>
     </aside>
-    <picture class="bgpicture" > </picture>>
+    <picture class="bgpicture"> </picture>>
     <main>
 
     </main>
+
+    <!-- The Modal -->
+    <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+        <div class="modal-dialog modal-full-height modal-right" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tr id="form-row">
+                            <form id="request-form">
+                                <td colspan="4">
+                                    <lable>Type of session:</lable>
+                                    <select id="type-toggle">
+                                        <option value=“empty” selected>Choose an Option</option>
+                                        <option value="request">Help Request</option>
+                                        <option value="general">General Study</option>
+                                        <option value="focused">Focused Study</option>
+                                    </select><br>
+                                    <lable>Title:</lable>
+                                    <input placeholder="Enter Title of Session" id="sesh-title" type="text" /><br>
+                                    <lable>Description:</lable><br>
+
+                                    <textarea placeholder="Enter a Description of the Session" id="sesh-desc"
+                                        type="text"></textarea><br>
+
+                                    <lable>Number of Paticipants:</lable><br>
+                                    <input placeholder="5" id="mem-limit" min="0" max="20" type="number" /><br>
+
+                                    <div style="display:none" class="show-general">
+                                        <lable>Session time:</lable><br>
+                                        <input placeholder="Choose a start time" type="datetime-local" id="start-time"
+                                            type="text" />
+                                        <input placeholder="Choose an end time" type="datetime-local" id="end-time"
+                                            type="text" />
+                                    </div>
+
+                                    <div style="display:none" class="show-request">
+                                        <lable>Enter your avilability:</lable><br>
+                                        <input placeholder="Enter Your Opt 1 Start Availability" type="datetime-local"
+                                            id="opt-1-start" type="text" />
+                                        <input placeholder="Enter Your Opt 1 End Availability" type="datetime-local"
+                                            id="opt-1-end" type="text" /><br>
+                                        <lable>Enter your avilability:</lable><br>
+                                        <input placeholder="Enter Your Opt 2 Start Availability" type="datetime-local"
+                                            id="opt-2-start" type="text" />
+                                        <input placeholder="Enter Your Opt 2 End Availability" type="datetime-local"
+                                            id="opt-2-end" type="text" /><br>
+                                        <lable>Enter your avilability:</lable><br>
+                                        <input placeholder="Enter Your Opt 3 Start Availability" type="datetime-local"
+                                            id="opt-3-start" type="text" />
+                                        <input placeholder="Enter Your Opt 3 End Availability" type="datetime-local"
+                                            id="opt-3-end" type="text" />
+                                    </div>
+                                </td>
+                                <td><button type="submit" id="submit" class="btn btn-success">Sign up</button>
+                                </td>
+                            </form>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Height Modal Right -->
+
+
+    <!-- Custom Script -->
+    <script>
+
+        $(document).ready(function () {
+            $('#type-toggle').on('change', function () {
+                switch ($(this).val()) {
+                    case "request":
+                        $(".show-general").hide();
+                        $(".show-request").show();
+                        break;
+                    case "general":
+                        $(".show-request").hide();
+                        $(".show-general").show();
+                        break;
+                    case "focused":
+                        $(".show-request").hide();
+                        $(".show-general").show();
+                        break;
+                }
+            });
+        });
+    </script>
+    <script src="gen_session_front.js" type="text/javascript"></script>
+    ​
 </body>
 
 </html>

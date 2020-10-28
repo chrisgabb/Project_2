@@ -5,16 +5,12 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-<<<<<<< HEAD
     typeOfSession: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
     },
     info: {
-=======
-    description: {
->>>>>>> 08581c35231c9a838e7169da7832507711191f9f
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]

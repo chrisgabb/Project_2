@@ -21,67 +21,48 @@ module.exports = function (sequelize, DataTypes) {
       len: [1]
     },
     timeStart: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
-      validate: {
-        isDate: true,
-        isAfter: Date.now()
-      }
+      
     },
     timeEnd: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
-      validate: {
-        isDate: true,
-        isAfter: Date.now()
-      }
     },
     Opt1_timeStart: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     },
     Opt1_timeEnd: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     },
     Opt2_timeStart: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     },
     Opt2_timeEnd: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     },
     Opt3_timeStart: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     },
     Opt3_timeEnd: {
-      type: DataTypes.DATE,
+      type: DataTypes.TEXT,
       allowNull: true,
       validate: {
-        isDate: true,
-        isAfter: Date.now()
       }
     }
   });

@@ -11,11 +11,8 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
-var exphbs = require("express-handlebars");
 
 // Sets up the Express app to handle data parsing
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -23,12 +20,9 @@ app.use(express.json());
 app.use(express.static("public"));
 // Routes
 // =============================================================
-const htmlroutes = require("./routes/html-routes.js");
-
-app.use(htmlroutes)
-
-// require("./routes/members-api-routes.js")(app);
-// require("./routes/sessions-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+require("./routes/members-api-routes.js")(app);
+require("./routes/sessions-api-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {

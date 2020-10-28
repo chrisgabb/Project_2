@@ -56,15 +56,20 @@ header ul {
  main {
    position: fixed;
 }
+
 section{
     margin-top: 3rem;
-    float: right;
+    /* float: right; */
     width: 83%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
+    margin-left: 30%;
 }
 .all-cards{
-    width: 300px
+    margin-left: 5px;
+    /* float: right; */
+    max-width: 50%;
+    /* position: relative; */
 }
 
 header nav ul li {
@@ -81,6 +86,13 @@ header nav ul li :hover{
     font-weight: bolder;
     color: rgb(245, 164, 43);
 }
+.eachSessionCard li{
+   display: inline-block;
+}
+.eachSessionCard{
+    padding: 0;
+    margin-bottom: 0;
+}
 aside{
     text-align: center;
     position: fixed;
@@ -96,7 +108,17 @@ aside{
     top: 5rem;
     left: 0;
     padding-top: 2rem;
+    min-width: 200px;
 }
+aside ul {
+    margin-left: -3rem;
+    text-align: left;
+    overflow: hidden;
+}
+aside ul li {
+    border: none !important;
+}
+
 aside h3{
  margin-top: 3rem;
 }

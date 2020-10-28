@@ -1,22 +1,60 @@
 {
+<<<<<<< HEAD
   "name": "project_2",
+=======
+  "name": "Avail",
+>>>>>>> 5decbb26de24b51c9eb04ffab03e17e51290b6ac
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrisgabb/Project_2.git"
+=======
+    "test": "npm run lint",
+    "start": "node server.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix .",
+    "watch": "nodemon server.js"
+>>>>>>> 5decbb26de24b51c9eb04ffab03e17e51290b6ac
   },
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "bugs": {
     "url": "https://github.com/chrisgabb/Project_2/issues"
   },
   "homepage": "https://github.com/chrisgabb/Project_2#readme"
+=======
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.16.1",
+    "handlebars": "^4.7.6",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^1.7.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.22.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7"
+  }
+>>>>>>> 5decbb26de24b51c9eb04ffab03e17e51290b6ac
 }

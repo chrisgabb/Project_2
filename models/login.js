@@ -23,6 +23,7 @@ Login.associate = function (models) {
 
 return Login;
 };
+<<<<<<< HEAD
   var Login = sequelize.define("Login", {
     // Giving the Members model a name of type STRING
 
@@ -47,3 +48,5 @@ Login.belongsTo(models.Members, {
 
 return Login;
 };
+=======
+>>>>>>> 5decbb26de24b51c9eb04ffab03e17e51290b6ac

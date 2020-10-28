@@ -45,28 +45,44 @@ header ul {
     margin-right: 2rem;
 }
 .red {
-    background-color: rgba(189, 6, 6, 0.774);
+    background-color: rgba(189, 6, 6, 0.61);
 }
 .green {
-    background-color: rgba(36, 110, 36, 0.685);
+    background-color: rgba(241, 245, 26, 0.205);
 }
-.orange {
-    background-color: rgba(175, 117, 10, 0.747);
+.blue {
+    background-color: rgba(70, 141, 221, 0.274);
 }
  main {
    position: fixed;
 }
+
 section{
     margin-top: 3rem;
-    float: right;
+    /* float: right; */
     width: 83%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
+    margin-left: 30%;
 }
 .all-cards{
-    width: 300px
+    margin-left: 5px;
+    /* float: right; */
+    max-width: 50%;
+    /* position: relative; */
 }
-
+.tagAlong{
+    float: right;
+    /* margin-right: -3rem; */
+    background-color: transparent;
+}
+.takeOnIt{
+    background-color:transparent;
+}
+.sessionHour{
+    float: left;
+    /* margin-left: -5rem; */
+}
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
@@ -80,6 +96,13 @@ header nav ul li, header nav ul li a {
 header nav ul li :hover{
     font-weight: bolder;
     color: rgb(245, 164, 43);
+}
+.eachSessionCard li{
+   display: inline-block;
+}
+.eachSessionCard{
+    padding: 0;
+    margin-bottom: 0;
 }
 aside{
     text-align: center;
@@ -96,7 +119,17 @@ aside{
     top: 5rem;
     left: 0;
     padding-top: 2rem;
+    min-width: 200px;
 }
+aside ul {
+    margin-left: -3rem;
+    text-align: left;
+    overflow: hidden;
+}
+aside ul li {
+    border: none;
+}
+
 aside h3{
  margin-top: 3rem;
 }
@@ -233,11 +266,11 @@ div .img :hover {
 	right: -5px; 
 }
 .btn:hover, .btn:focus {
-    background: #ff8922 !important;
+    background: #ff8922;
 }
 .btn {
     border: none;
-	background: #00D0FF !important;
+	background: #00D0FF;
 	line-height: normal;
 }
 .modal-login .modal-footer {
@@ -301,11 +334,11 @@ div .img :hover {
 	right: -5px; 
 }
 .btn:hover, .btn:focus {
-    background: #ff8922 !important;
+    background: #ff8922;
 }
 .btn {
     border: none;
-	background: #00D0FF !important;
+	background: #00D0FF;
 	line-height: normal;
 }
 .modal-title .modal-footer {

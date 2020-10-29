@@ -60,9 +60,9 @@ $(document).ready(function () {
         Opt3_timeEnd: opt3EndInput
           .val() || null,
       });
-      // upsertMemberSession({
+       upsertMemberSession({
 
-      // })
+       })
     }
   }
 
@@ -70,7 +70,6 @@ $(document).ready(function () {
   function upsertSession(seshData) {
     console.log(seshData)
     $.post("/api/sessions", seshData)
-     document.location.reload();
   }
-
+ 
 });

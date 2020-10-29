@@ -15,7 +15,7 @@ $(document).ready(function () {
   var opt3EndInput = $("#opt-3-end");
   var genAvailInput = $(".general-session");
   var reqAvailInput = $(".request-session");
-
+  var sessionId;
 
 
 
@@ -23,10 +23,14 @@ $(document).ready(function () {
   // an Author
   $(document).on("click", "#postIt", handleSessionFormSubmit);
 
+ 
 
   // A function to handle what happens when the form is submitted to create a new Author
-  function handleSessionFormSubmit(event) {
+ async function handleSessionFormSubmit(event) {  
     event.preventDefault();
+   await $.get("/api/sessions", function (data) {
+      sessionId = data.length+1
+    })
     // Don't do anything if the fields hasn't been filled out
     if (!typeInput.val().trim().trim() || !titleInput.val().trim().trim() || !memLimitInput.val().trim().trim()) {
       return;
@@ -59,19 +63,23 @@ $(document).ready(function () {
           .val() || null,
         Opt3_timeEnd: opt3EndInput
           .val() || null,
+      }, {
+      member_id: memberIdInput.val().trim(),
+      session_id: sessionId
       });
-      upsertMemberSession({
-
-      })
     }
   }
 
   // A function for creating a member. Calls upon completion
-  function upsertSession(seshData) {
+  function upsertSession(seshData, seshMembData) {
     console.log(seshData)
+    console.log(seshMembData)
     $.post("/api/sessions", seshData)
-    $.post("/")
-     document.location.reload();
+
+    $.post("/api/sessionMember", seshMembData)
+   
+    
+    document.location.reload();
   }
 
 });

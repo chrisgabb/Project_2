@@ -5,4 +5,10 @@ module.exports = function(app) {
       res.json(dbSessionMember);
     });
   });
+  app.post("/api/sessionMember", function(req, res) {
+    db.SessionMember.create(req.body).then(function(dbSessionMember) {
+      res.json(dbSessionMember);
+    });
+  });
+
 }

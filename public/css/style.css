@@ -1,6 +1,6 @@
 nav{
     position: fixed;
-    background-color: rgb(243, 243, 237);
+    background-color: #f3f3f3;
     box-shadow: rgb(43, 55, 59);  
 }
 header nav img {    
@@ -110,7 +110,7 @@ aside{
     width: 17%;
     height: 100%;
     max-height:100%;
-    background-color: rgb(243, 247, 243);
+    background-color: #eeeded;
     border: 5px solid rgb(242, 243, 242);
     word-wrap:break-word;
     overflow-x: hidden;
@@ -127,7 +127,7 @@ aside ul {
     overflow: hidden;
 }
 aside ul li {
-    border: none !important;
+    border: none;
 }
 
 aside h3{
@@ -139,6 +139,12 @@ main {
     width: 100%;
     max-height: 100%;
     max-width: 100%;
+}
+#right {
+        background-image: url(logolarge.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
 }
 img {
     float: right ;
@@ -218,3 +224,76 @@ div .img :hover {
 
     }
 }
+/* Modal css */
+.modal-login {
+	color: #fc841a;
+    width: 450px;
+}
+.modal-login .modal-content {
+    margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-body{
+    margin: 0 auto;
+}
+.modal-login .modal-header {
+	border-bottom: none;
+	position: relative;
+	justify-content: center;
+}
+.modal-login h4 {
+	text-align: center;
+	font-size: 26px;
+}
+.modal-login  .form-group {
+	position: relative;
+}
+.modal-login i {
+	position: absolute;
+	left: 13px;
+	top: 11px;
+	font-size: 18px;
+}
+.modal-login .form-control {
+	padding-left: 40px;
+}
+.modal-login .form-control:focus {
+	border-color: #00D0FF;
+}
+.modal-login .form-control, .modal-login .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-login .hint-text {
+	text-align: center;
+	padding-top: 10px;
+}
+.modal-login .close {
+	position: absolute;
+	top: -5px;
+	right: -5px; 
+}
+.btn:hover, .btn:focus {
+    background: #ff8922;
+}
+.btn {
+    border: none;
+	background: #00D0FF;
+	line-height: normal;
+}
+.modal-login .modal-footer {
+	background: #ecf0f1;
+	border-color: #dee4e7;
+	text-align: center;
+	margin: 0 -20px -20px;
+	border-radius: 5px;
+	font-size: 13px;
+	justify-content: center;
+}
+.modal-login .modal-footer a {
+	color:#fc841a;
+}
+/*end of modal css*/
+

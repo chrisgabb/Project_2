@@ -27,7 +27,7 @@ $(document).ready(function () {
   // A function to handle what happens when the form is submitted to create a new Author
   function handleSessionFormSubmit(event) {
     event.preventDefault();
-    // Don't do anything if the name fields hasn't been filled out
+    // Don't do anything if the fields hasn't been filled out
     if (!typeInput.val().trim().trim() || !titleInput.val().trim().trim() || !memLimitInput.val().trim().trim()) {
       return;
     } else {
@@ -60,9 +60,9 @@ $(document).ready(function () {
         Opt3_timeEnd: opt3EndInput
           .val() || null,
       });
-      // upsertMemberSession({
+      upsertMemberSession({
 
-      // })
+      })
     }
   }
 

@@ -15,7 +15,7 @@ module.exports = function (sequelize, DataTypes) {
   Members.associate = function (models) {
    
     Members.belongsToMany(models.Sessions, {
-      through: "session_member",
+      through: models.SessionMember,
       as: "sessions",
       foreignKey: "member_id",
     });

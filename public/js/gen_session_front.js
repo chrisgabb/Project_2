@@ -70,6 +70,7 @@ $(document).ready(function () {
   function upsertSession(seshData) {
     console.log(seshData)
     $.post("/api/sessions", seshData)
+    $.post("/")
      document.location.reload();
   }
 

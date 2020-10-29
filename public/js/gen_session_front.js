@@ -27,6 +27,11 @@ $(document).ready(function () {
   // A function to handle what happens when the form is submitted to create a new Author
   function handleSessionFormSubmit(event) {
     event.preventDefault();
+    $.get("/api/sessions", function (data) {
+       sessionId = data.length
+       console.log(sessionId)
+    })
+
     // Don't do anything if the name fields hasn't been filled out
     if (!typeInput.val().trim().trim() || !titleInput.val().trim().trim() || !memLimitInput.val().trim().trim()) {
       return;
@@ -60,9 +65,11 @@ $(document).ready(function () {
         Opt3_timeEnd: opt3EndInput
           .val() || null,
       });
-       upsertMemberSession({
-
-       })
+        upsertMemberSession({
+        session_id: sessionId,
+        member_id: memberIdInput
+        })
+       
     }
   }
 
@@ -71,5 +78,6 @@ $(document).ready(function () {
     console.log(seshData)
     $.post("/api/sessions", seshData)
   }
- 
+  function upsertMemberSession(sesmem)
+    $.post("/api/session_member", sesmem)
 });

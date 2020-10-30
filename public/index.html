@@ -58,6 +58,37 @@
         <div class="col-4 img">
           <img class="bottom1" src="images/outdoors.png" alt="Generic placeholder image">
         </div>
+    </main>
+    <article>
+        <div class="container" id="parent">
+            <div class="row">
+                <div class="col center">
+                    <p><b>Avail is a peer to peer tutoring resource that brings students of all subjects together to learn
+                        and grow.
+                        Through our platform, students unite to provide support to fellow peers in pre-scheduled, small
+                        video conference groups.</b><p>
+                        When seeking support, a student can request help from a single peer or a group of peers and has
+                        the option
+                        to allow others to "spectate", thus allowing more of their peers to learn as well.
+                        At Avail, we believe in the power of growing through teaching and what better way to
+                        do that than allowing students to push themselves to the edge of their comprehension by offering
+                        their help to a peer. We want Avail to be a platform of trust and confidence, creating a safe
+                        space
+                        for questions and discovery. You don’t have to be an expert to be able to lend a hand and help
+                        someone
+                        overcome an educational obstacle.
+                        Whether you are a student struggling to comprehend subject matter, or simply have a quick
+                        question
+                        to get through a homework assignment, Avail is there to help. Need someone to proofread your
+                        paper
+                        before you turn it in? Set up a meeting with someone in your peer group who can give you a fresh
+                        set
+                        of eyes and point out things you may have overlooked. Want to run drills in a coding language
+                        you are
+                        learning and need a friend to live code with you? Set your availability and wait for someone to
+                        tag in.
+                        Any subject, any stage of learning, Avail is waiting to help find you the support you need.</p>
+                </div>
 
         <div class="col-4 img">
           <img class="bottom3" src="images/teens.png" alt="Generic placeholder image">
@@ -130,50 +161,50 @@
     </div>
   </div>
 
-  <div id="myModalSignUp" class="modal fade">
-    <div class="modal-dialog modal-login">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Sign Up</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <form action="/examples/actions/confirmation.php" method="post">
-            <div class="form-group">
-              <i class="fa fa-user"></i>
-              <input type="text" class="form-control" placeholder="First Name" required="required">
-            </div>
-            <div class="form-group">
-              <i class="fa fa-user"></i>
-              <input type="text" class="form-control" placeholder="Last Name" required="required">
-            </div>
-            <div class="form-group">
-              <i class="fa fa-lock"></i>
-              <input type="email" class="form-control" placeholder="Email" required="required">
-            </div>
-            <div class="form-group">
-              <i class="fa fa-lock"></i>
-              <input type="text" class="form-control" placeholder="User Name" required="required">
-            </div>
-            <div class="form-group">
-              <i class="fa fa-lock"></i>
-              <input type="password" class="form-control" placeholder="Password" required="required">
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <a href="#myModalSignIn" class="trigger-btn" data-toggle="modal" data-dismiss="modal">Already a user? Sign
-            In</a>
-        </div>
+    <div id="myModalSignUp" class="modal fade">
+      <div class="modal-dialog modal-login">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">Sign Up</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <form action="/examples/actions/confirmation.php" method="post">
+                      <div class="form-group">
+                          <i class="fa fa-user"></i>
+                          <input type="text" class="form-control" id="member-first-name" placeholder="First Name" required="required">
+                      </div>
+                      <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control" id="member-last-name" placeholder="Last Name" required="required">
+                    </div>
+                      <div class="form-group">
+                          <i class="fa fa-lock"></i>
+                          <input type="email" class="form-control" id="member-email" placeholder="Email" required="required">
+                      </div>
+                      <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="text" class="form-control" id="member-username" placeholder="User Name" required="required">
+                    </div>
+                      <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control" id="member-password" placeholder="Password" required="required">
+                    </div>
+                      <div class="form-group">
+                          <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#myModalSignIn" class="trigger-btn" data-toggle="modal" data-dismiss="modal">Already a user? Sign In</a>
+              </div>
+          </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
 </body>
 
 </html>

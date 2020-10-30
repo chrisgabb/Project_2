@@ -1,8 +1,8 @@
 $(document).ready(function () {
   // Getting references to the name input and author container, as well as the table body
-  var memberIdInput = $("#memberID")
+  
   var typeInput = $("#type-toggle");
-  var titleInput = $("#sesh-title");
+  var tiTLeInput = $("#sesh-title");
   var infoInput = $("#sesh-desc");
   var memLimitInput = $("#mem-limit");
   var startTimeInput = $("#start-time");
@@ -15,24 +15,28 @@ $(document).ready(function () {
   var opt3EndInput = $("#opt-3-end");
   var genAvailInput = $(".general-session");
   var reqAvailInput = $(".request-session");
-
-
+  var sessionId;
+  var memberIdInput = localStorage
 
 
   // Adding event listeners to the form to create a new object, and the button to delete
   // an Author
   $(document).on("click", "#postIt", handleSessionFormSubmit);
 
+ 
 
-  // A function to handle what happens when the form is submitted to create a new Author
-  function handleSessionFormSubmit(event) {
+ 
+ async function handleSessionFormSubmit(event) {  
     event.preventDefault();
-    // Don't do anything if the name fields hasn't been filled out
-    if (!typeInput.val().trim().trim() || !titleInput.val().trim().trim() || !memLimitInput.val().trim().trim()) {
+   await $.get("/api/sessions", function (data) {
+      sessionId = data.length+1
+    })
+    // Don't do anything if the fields hasn't been filled out
+    if (!typeInput.val().trim() || !tiTLeInput.val().trim() || !memLimitInput.val().trim()) {
       return;
     } else {
       upsertSession({
-        title: titleInput
+        title: tiTLeInput
           .val()
           .trim(),
         typeOfSession: typeInput
@@ -45,20 +49,23 @@ $(document).ready(function () {
           .val(),
         timeStart: moment(startTimeInput.val()).format("L LT")
           || null,
-        timeEnd: moment(endTimeInput.val()).format("L TL")
+        timeEnd: moment(endTimeInput.val()).format("L LT")
           || null,
-        Opt1_timeStart: opt1StartInput
-          .val() || null,
-        Opt1_timeEnd: opt1EndInput
-          .val() || null,
-        Opt2_timeStart: opt2StartInput
-          .val() || null,
-        Opt2_timeEnd: opt2EndInput
-          .val() || null,
-        Opt3_timeStart: opt3StartInput
-          .val() || null,
-        Opt3_timeEnd: opt3EndInput
-          .val() || null,
+        Opt1_timeStart: moment(opt1StartInput.val()).format("L LT")
+         || null,
+        Opt1_timeEnd: moment(opt1EndInput.val()).format("L LT")
+         || null,
+        Opt2_timeStart: moment(opt2StartInput.val()).format("L LT")
+         || null,
+        Opt2_timeEnd: moment(opt2EndInput.val()).format("L LT")
+         || null,
+        Opt3_timeStart: moment(opt3StartInput.val()).format("L LT")
+         || null,
+        Opt3_timeEnd:  moment(opt3EndInput.val()).format("L LT")
+         || null,
+      }, {
+      member_id: memberIdInput.val().trim(),
+      session_id: sessionId
       });
        upsertMemberSession({
 
@@ -67,9 +74,10 @@ $(document).ready(function () {
   }
 
   // A function for creating a member. Calls upon completion
-  function upsertSession(seshData) {
-    console.log(seshData)
+  function upsertSession(seshData, seshMembData) {
     $.post("/api/sessions", seshData)
+    $.post("/api/sessionMember", seshMembData)
+    document.location.reload();
   }
  
 });

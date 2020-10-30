@@ -31,14 +31,4 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/members/:id", function(req, res) {
-    db.Members.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbMembers) {
-      res.json(dbMembers);
-    });
-  });
-
 };

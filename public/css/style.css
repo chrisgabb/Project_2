@@ -3,11 +3,6 @@ nav{
     background-color: rgb(243, 243, 237);
     box-shadow: rgb(43, 55, 59);  
 }
-header{
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-}
 header nav img {    
     margin-left: 4rem;
     animation-name: titlePosition;
@@ -63,8 +58,7 @@ header ul {
 }
 
 section{
-    z-index: -1;
-    margin-top: 6rem;
+    margin-top: 3rem;
     /* float: right; */
     width: 83%;
     height: 100%;

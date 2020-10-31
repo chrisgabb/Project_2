@@ -7,10 +7,16 @@
 var express = require("express");
 // Sets up the Express App
 // =============================================================
+var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 8080;
+db.sequelize.sync().then(function(){
+  app.listen(PORT, function(){
+    console.log(`App listening on PORT`+ PORT)
+  });
+});
 
-var db = require("./models");
+
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));

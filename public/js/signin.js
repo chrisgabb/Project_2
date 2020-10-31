@@ -19,6 +19,6 @@ function verifyThisMember(event) {
                     }
                 }
             }
-            return wrongUsernamePasswordDiv.append(`<i><p class="text-danger">Wrong user name or Password</p></i>`);
+            return wrongUsernamePasswordDiv.append(`<i><p class="text-danger">Wrong Username or Password</p></i>`);
         });
 }

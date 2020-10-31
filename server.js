@@ -15,7 +15,12 @@ db.sequelize.sync().then(function(){
     console.log(`App listening on PORT`+ PORT)
   });
 });
-
+if (process.env.NODE_ENV === "production"){
+  app.use(express.static("build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+  });
+}
 
 
 // Sets up the Express app to handle data parsing

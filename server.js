@@ -23,11 +23,7 @@ app.use(express.static("public"));
 require("./routes/html-routes.js")(app);
 require("./routes/members-api-routes.js")(app);
 require("./routes/sessions-api-routes.js")(app);
-<<<<<<< HEAD
 require("./routes/session-memeber-api-routes.js")(app);
-=======
-require("./routes/session_member-routes.js")(app);
->>>>>>> main
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {

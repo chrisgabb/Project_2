@@ -64,9 +64,11 @@ section{
     height: 100%;
     /* position: relative; */
     margin-left: 30%;
+    margin-right: 5%;
 }
 .all-cards{
     margin-left: 5px;
+    margin-right: 5%;
     /* float: right; */
     max-width: 50%;
     /* position: relative; */

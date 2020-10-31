@@ -16,7 +16,7 @@ $(document).ready(function () {
   var genAvailInput = $(".general-session");
   var reqAvailInput = $(".request-session");
   var sessionId;
-  var memberIdInput = localStorage
+  var memberIdLocalStorage = parseInt(localStorage.getItem('myID').trim())
 
 
   // Adding event listeners to the form to create a new object, and the button to delete
@@ -64,7 +64,7 @@ $(document).ready(function () {
         Opt3_timeEnd:  moment(opt3EndInput.val()).format("L LT")
          || null,
       }, {
-      member_id: memberIdInput.val().trim(),
+      member_id: memberIdLocalStorage,
       session_id: sessionId
       });
     }
@@ -72,9 +72,18 @@ $(document).ready(function () {
 
   // A function for creating a member. Calls upon completion
   function upsertSession(seshData, seshMembData) {
+    console.log(seshData)
+    console.log(seshMembData)
     $.post("/api/sessions", seshData)
+
     $.post("/api/sessionMember", seshMembData)
+   
+    
     document.location.reload();
   }
 
+
+
+  
 });
+

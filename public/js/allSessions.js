@@ -80,18 +80,18 @@ $(document).ready(function () {
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="container-sm">
-                                                        <div class="row">
+                                                        <div class="row" id="${id}" data1="${Opt1TS}"data2="${Opt1TE}">
                                                             <div class="col-4">
                                                                 <lable>Option 1 Avail:</lable>
                                                             </div>
                                                             <div class="col-5">
-                                                                <p id="option-1"> ${Opt1TS} - ${Opt1TE}</p>
+                                                                <p id="option-1"> ${moment(Opt1TS).format("ddd L LT" )} - ${moment(Opt1TE).format("ddd L LT" )}</p>
                                                             </div>
                                                             <div class="col-3">
-                                                                <button type="button" class="btn btn-danger">Select</button>
+                                                                <button type="button" id="opt1Button" class="btn btn-danger">Select</button>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row" id="${id}" data1="${Opt2TS}"data2="${Opt2TE}">
                                                             <div class="col-4">
                                                                 <lable>Option 2 Avail:</lable>
                                                             </div>
@@ -99,10 +99,10 @@ $(document).ready(function () {
                                                                 <p id="option-2">${moment(Opt2TS).format("ddd L LT" )} - ${moment(Opt2TE).format("ddd L LT" )}</p>
                                                             </div>
                                                             <div class="col-3">
-                                                                <button type="button" class="btn btn-danger">Select</button>
+                                                                <button type="button" id="opt2Button"class="btn btn-danger">Select</button>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row" id="${id}" data1="${Opt3TS}"data2="${Opt3TE}">
                                                             <div class="col-4">
                                                                 <lable>Option 3 Avail:</lable>
                                                             </div>
@@ -110,7 +110,7 @@ $(document).ready(function () {
                                                                 <p id="option-3">${moment(Opt3TS).format("ddd L LT" )} - ${moment(Opt3TE).format("ddd L LT" )}</p>
                                                             </div>
                                                             <div class="col-3">
-                                                                <button type="button" class="btn btn-danger">Select</button>
+                                                                <button type="button" id="opt3Button" class="btn btn-danger">Select</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -126,14 +126,16 @@ $(document).ready(function () {
                             typeOfSessionColor = "green";
                             typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h4>${sessionDate}</h4></li>
                             <li> <h3 float-none>${title}</h3></li> <li class="float-right"> <p> by: ${members[0].first_name}
-                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5><button class="tagAlong">TagAlong</button>`
+                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5>
+                             <button id="tagAlong" class="tagAlong">TagAlong</button>`
                             break
                           }
           case "focus": {
                           typeOfSessionColor = "blue";
                           typeOfSessionDisplay = `<ul class="eachSessionCard"><li class="float-left"><h4>${sessionDate}</h4></li>
                             <li> <h3 float-none>${title}</h3></li> <li class="float-right"> <p> by: ${members[0].first_name}
-                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5><button class="tagAlong">TagAlong</button>`
+                             ${members[0].last_name}</p></li></ul><h5 class="sessionHour">${moment(timeS).format("HH:mma")}</h5>
+                             <button id="tagAlong" class="tagAlong">TagAlong</button>`
                             break
                         }
          }
@@ -141,7 +143,7 @@ $(document).ready(function () {
         <div class="card">
         <div class="card-header  ${typeOfSessionColor} btn" style="text-left" id="heading${id}" data-toggle="collapse" data-target="#collapse${id}" aria-expanded="false"
         aria-controls="collapse${id}">
-            <div class="mb-0 ">
+            <div class="mb-0" id="${id}">
                     ${typeOfSessionDisplay}
             </div>
         </div>

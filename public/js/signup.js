@@ -10,6 +10,13 @@ $(document).ready(function () {
  
   async function handleMemberFormSubmit(event) {
     event.preventDefault();
+   await $.get("/api/members", function (data) {
+      console.log(data.length)
+      var memberID = data.length+1 ;
+      console.log(memberID);
+      localStorage.setItem('myID', memberID)
+    });
+   // getMemberID()
     if (!firstNameInput.val().trim().trim() || !lastNameInput.val().trim().trim() || !emailInput.val().trim().trim() || !userNameInput.val().trim().trim() || !passwordInput.val().trim().trim()) {
       return;
     } else {
@@ -30,17 +37,14 @@ $(document).ready(function () {
           .val()
           .trim(),
       });
-      getMemberID()
     }
   }
   function getMemberID() {
-    console.log("PLEASE")
-    $.get("/api/members", function (data) {
-      var memberID = data.length + 1
-      localStorage.setItem('myID', memberID)
-    }).then(function nextPage() { return document.location = "http://localhost:8080/home" })
+    
   }
-  function upsertMember(memberData) {
-    $.post("api/members", memberData)
-  }
+
+ async function upsertMember(memberData) {
+   await $.post("api/members", memberData)
+  return document.location = "http://localhost:8080/home" 
+ }
 });

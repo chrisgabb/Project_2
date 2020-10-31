@@ -1,10 +1,10 @@
 USE channel;
 INSERT INTO members (id, first_name, last_name, email, userName, password, createdAt, updatedAt)
-VALUES (1, "Chris", "G", "cgabb@gmail.com" "chriG", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
+VALUES (1, "Chris", "G", "cgabb@gmail.com", "chriG", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
 INSERT INTO members (id, first_name, last_name, email, userName, password, createdAt, updatedAt)
-VALUES (2, "Seless", "L", "selessL@gmail.com" "selsL", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
+VALUES (2, "Seless", "L", "selessL@gmail.com", "selsL", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
 INSERT INTO members (id, first_name, last_name, email, userName, password, createdAt, updatedAt)
-VALUES (3, "Sendy", "M", "sendymederos@gmail.com" "senM", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
+VALUES (3, "Sendy", "M", "sendymederos@gmail.com", "senM", "password", "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000");
 
 INSERT INTO sessions (id, title, typeOfSession, info, membersLimit, timeStart, timeEnd, Opt1_timeStart, Opt1_timeEnd, Opt2_timeStart, Opt2_timeEnd, Opt3_timeStart, Opt3_timeEnd, createdAt, updatedAt)
 VALUES (1, "CSS", "general", "I didnt get it", 5, "2020-10-22T15:48:02.000", "2020-10-22T15:48:02.000", null, null, null, null, null, null, "2020-10-22T15:48:02.000",  "2020-10-22T15:48:02.000");

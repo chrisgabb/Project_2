@@ -1,6 +1,19 @@
+body, html {
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #FFFFFF 0%,
+        #FFFFFF 50%,
+        #CF6016 55%,
+        #CF6016 25%,
+        #CF6016 75%,
+        #FFFFFF 100%  
+    );
+}
+
 nav{
     position: fixed;
-    background-color: rgb(243, 243, 237);
+    background-color: #f3f3f3;
     box-shadow: rgb(43, 55, 59);  
 }
 header nav img {    
@@ -9,18 +22,15 @@ header nav img {
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
-/* header nav h1 {
-    color: darkkhaki;
-    margin-left: 4rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-} */
 article{
-    /* background-color: rgba(247, 174, 38, 0.486); */
-    margin-top: 55rem ;
+    /* background-color:#fcf9f6; */
+    margin-top: 45rem ;
     margin-bottom: 30rem ; 
+    /* height: 400px; */
+    width: 100%;
+    text-align: center;
+    /* padding: 70px 0;   */
 }
-
 article div p{
     /* background-color: rgba(247, 174, 38, 0.521); */
     background-color: rgba(243, 242, 241, 0.616);
@@ -28,47 +38,61 @@ article div p{
     padding: 1rem;
     text-shadow: 20px 20px 10px rgb(117, 115, 115);
     box-shadow: 0 0 8px 8px white inset;
+    border: 3px solid #fc7500;
 }
 #parent {
-    /* background-color: white; */
+    background-color: white;
     color: rgb(19, 20, 20);
-    /* text-decoration-color: white; */
-    
+    text-decoration-color: white;
     width: 1200px;
     height:auto;
 }
-
 .bypass {
     height: 100%;
 }
 header ul {
     margin-right: 2rem;
 }
-.red {
+/* .red {
     background-color: rgba(189, 6, 6, 0.61);
 }
 .green {
     background-color: rgba(241, 245, 26, 0.205);
-}
+}   
 .blue {
     background-color: rgba(70, 141, 221, 0.274);
+} */
+.red {
+    background-color:#fc831aa8;
+}
+.green {
+    background-color: rgba(168, 233, 64, 0.603);
+}
+.blue {
+    background-color:#00d0ffb6;
 }
  main {
    position: fixed;
 }
-
 section{
-    margin-top: 3rem;
-    /* float: right; */
-    width: 83%;
+margin-left: 30%;
+position: relative;
+margin-top: 5rem; 
+}
+picture{
+    width: 100%;
     height: 100%;
-    /* position: relative; */
-    margin-left: 30%;
+    position: fixed; 
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/grey-gradient-geometric-mesh-pattern-pldesign.jpg);
+    background-size: cover;
 }
 .all-cards{
     margin-left: 5px;
     /* float: right; */
-    max-width: 50%;
+    width: 500px;
+     max-width: 70%; 
+    /* min-width: 50%;  */
+    
     /* position: relative; */
 }
 .tagAlong{
@@ -87,12 +111,10 @@ header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
-
 header nav ul li, header nav ul li a {
     color:  rgb(245, 164, 43);
     font-style: italic;
 }
-
 header nav ul li :hover{
     font-weight: bolder;
     color: rgb(245, 164, 43);
@@ -104,35 +126,71 @@ header nav ul li :hover{
     padding: 0;
     margin-bottom: 0;
 }
-aside{
-    text-align: center;
-    position: fixed;
-    width: 17%;
-    height: 100%;
-    max-height:100%;
-    background-color: rgb(243, 247, 243);
-    border: 5px solid rgb(242, 243, 242);
-    word-wrap:break-word;
-    overflow-x: hidden;
-    padding-top: 20px;
-    z-index: 1;
-    top: 5rem;
-    left: 0;
-    padding-top: 2rem;
-    min-width: 200px;
+/* media query for collapsable side coloumn*/
+@media screen and (min-width: 680px) {
+    aside{
+        text-align: center;
+        position: fixed;
+        width: 17%;
+        height: 100%;
+        max-height:100%;
+        background-color: #eeeded;
+        border-right: 3px solid #fc841a;
+        word-wrap:break-word;
+        overflow-x: hidden;
+        padding-top: 20px;
+        z-index: 1;
+        top: 5rem;
+        left: 0;
+        padding-top: 2rem;
+        min-width: 200px;
+    }
+    aside ul {
+        margin-left: -3rem;
+        text-align: left;
+        overflow: hidden;
+    }
+    aside ul li {
+        border: none;
+    } 
+    aside h3{
+     margin-top: 3rem;
+    }
 }
-aside ul {
-    margin-left: -3rem;
-    text-align: left;
-    overflow: hidden;
+@media screen and (max-width: 680px) {
+    aside {
+        text-align: left;
+        position: fixed;
+        width: 100%;
+        background-color: #eeeded;
+        border-bottom: 3px solid #fc841a;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        z-index: 1;
+        height: 70px;
+    }
+    aside ul {
+      display: none;
+    }
+    aside h3{
+        display: none;
+       }
+    aside button {
+        position: relative;
+    }
+} 
+@media screen and (min-width: 680px) {
+    main {
+        width: 66%;
+    }
 }
-aside ul li {
-    border: none !important;
+@media screen and (max-width: 680px) {
+    main {
+        width: 100%;
+    }
 }
-
-aside h3{
- margin-top: 3rem;
-}
+/*collapsable side column complete*/
 main {
     margin: 0%;
     padding: 0%;
@@ -147,7 +205,6 @@ img {
 .top1{
     position: relative;
     animation:opacity 8s linear infinite;
-
 }
 .top2{
     position: relative;
@@ -155,7 +212,6 @@ img {
     margin-right: 0rem;
     z-index: 6;
 }
-
 .top3{
     position: relative;
     margin-right: 2rem;
@@ -215,6 +271,76 @@ div .img :hover {
     100%{
         opacity: 1;
         transform: scale(1, 1);
-
     }
+}
+/* Modal css */
+.modal-login {
+	color: #fc841a;
+    width: 450px;
+}
+.modal-login .modal-content {
+    margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-body{
+    margin: 0 auto;
+}
+.modal-login .modal-header {
+	border-bottom: none;
+	position: relative;
+	justify-content: center;
+}
+.modal-login h4 {
+	text-align: center;
+	font-size: 26px;
+}
+.modal-login  .form-group {
+	position: relative;
+}
+.modal-login i {
+	position: absolute;
+	left: 13px;
+	top: 11px;
+	font-size: 18px;
+}
+.modal-login .form-control {
+	padding-left: 40px;
+}
+.modal-login .form-control:focus {
+	border-color: #00D0FF;
+}
+.modal-login .form-control, .modal-login .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-login .hint-text {
+	text-align: center;
+	padding-top: 10px;
+}
+.modal-login .close {
+	position: absolute;
+	top: -5px;
+	right: -5px; 
+}
+.btn:hover, .btn:focus {
+    background: #ff8922;
+}
+aside .btn  {
+    border: none;
+	background: #00D0FF;
+	line-height: normal;
+}
+.modal-login .modal-footer {
+	background: #ecf0f1;
+	border-color: #dee4e7;
+	text-align: center;
+	margin: 0 -20px -20px;
+	border-radius: 5px;
+	font-size: 13px;
+	justify-content: center;
+}
+.modal-login .modal-footer a {
+	color:#fc841a;
 }

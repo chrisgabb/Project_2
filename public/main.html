@@ -16,41 +16,44 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body id="main">
     <header>
         <nav class="navbar">
             <img class="navAvail" src="images/logo3.png" alt="navAvail">
             <ul>
-                <li>Sign out </li>
+                <li> <a href="http://localhost:8080">Sign out </a></li>
 
             </ul>
         </nav>
     </header>
     <aside>
-        
-        <button type="button" href="#myModalSignIn"  data-target="#staticBackdrop" data-toggle="modal" class="btn btn-danger"> Create Session</button>
+
+        <button type="button" href="#myModalSignIn" data-target="#staticBackdrop" data-toggle="modal"
+            class="btn btn-danger"> Create Session</button>
         <h3>Peers</h3>
         <ul id="membersContainer">
 
         </ul>
     </aside>
-    <picture class="bgpicture"> </picture>>
+    <picture class="bgpicture"> </picture>
 
     <section>
-        <div class="container all-cards">
-            <div clas="row">
-                <div clas="col ">
-                    <div id="accordion">
+        <div class="section">
+            <div class="container all-cards">
+                <div clas="row">
+                    <div clas="col">
+                        <div id="accordion">
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Modal -->
+    <!-- Modal To create a Session-->
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog  modal-login">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Create Session</h5>
@@ -64,10 +67,10 @@
                         <option value=“empty” selected>Choose an Option</option>
                         <option value="request">Help Request</option>
                         <option value="general">General Study</option>
-                        <option value="focused">Focused Study</option>
+                        <option value="focus">Focused Study</option>
                     </select><br>
-                    <lable>Member ID:</lable>
-                    <input placeholder="Enter your member id" id="memberID" type="text" /><br>
+                    <!-- <lable>Member ID:</lable>
+                    <input placeholder="Enter your member id" id="memberID" type="text" /><br> -->
                     <lable>Title:</lable>
                     <input placeholder="Enter Title of Session" id="sesh-title" type="text" /><br>
                     <lable>Description:</lable><br>
@@ -109,6 +112,7 @@
             </div>
         </div>
     </div>
+
     <script>
         $(document).ready(function () {
             $('#type-toggle').on('change', function () {
@@ -121,7 +125,7 @@
                         $(".show-request").hide();
                         $(".show-general").show();
                         break;
-                    case "focused":
+                    case "focus":
                         $(".show-request").hide();
                         $(".show-general").show();
                         break;
@@ -129,9 +133,8 @@
             });
         });
     </script>
-    <script src="js/members-pane.js" type="text/javascript"></script>
-    <script src="js/gen_session_front.js" type="text/javascript"></script>
-
+    <script src="js/allSessions.js" type="text/javascript"></script>
+    <script src="js/session_front.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 </body>

@@ -67,28 +67,12 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
   Sessions.associate = function (models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
     Sessions.belongsToMany(models.Members, {
-      through: "session_member",
+      through: models.SessionMember,
       as: "members",
       foreignKey: "session_id",
     });
   };
-
-
 return Sessions;
 };
 
-
-// console.log( Date.now())
-
-// console.log(new Date(Date.now()))
-
-// myDate = "2014/10/29 18:10:45";
-// myDate = new Date(myDate);
-// console.log(myDate)
-// // sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-// // date = sdf.parse(myDate);
-// milliseconds = myDate.getMilliseconds();
-// console.log(milliseconds)
